@@ -71,6 +71,7 @@
     <Content Include="Main.css" />
     <Content Include="packages.config" />
     <Content Include="MasterPage.Master" />
+    <None Include="Properties\PublishProfiles\Davy.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
