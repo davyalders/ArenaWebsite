@@ -11,16 +11,14 @@
 </head>
 <body>
     <form id="form1" runat="server">
-        <div>
-            <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
-                    <Items>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
-                        <asp:MenuItem NavigateUrl="~/info.aspx" Text="Game info"/>
-                        <asp:MenuItem NavigateUrl="~/Registration.aspx" Text="Register"/>
-                        <asp:MenuItem NavigateUrl="~/Ranking.aspx" Text="Rankings"/>
-                    </Items>
-                </asp:Menu>
-        </div>
+        <div id="nav">
+            <ul>
+            <li><a href="Default.aspx">Home</a></li>
+            <li><a href="Info.aspx">Game Info</a></li>
+            <li><a href="Registration.aspx">Register</a></li>
+            <li><a href="Ranking.aspx">Rankings</a></li>
+            </ul>
+            
           <div>
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         <link href="Main.css" rel="stylesheet" type="text/css" />

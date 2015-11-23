@@ -5,6 +5,37 @@
 
 #reg1 {
     position: absolute;
-    top: 50%;
-    left: 40%;
+    top: 200px;
+    left: 482px;
+
 }
+
+#nav {
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    font-weight: bold;
+    width: 100%;
+    position: absolute;
+    top: 20%;
+    left: 15%;
+}
+
+ul {
+
+    background: transparent;
+    text-decoration: none;
+}
+a {
+    width: 6em;
+    text-decoration: none;
+    color: Grey;
+    padding: 0.2em 7em;
+}
+
+li {
+    display: inline;
+    padding: 20px;
+}
+
+a:hover {
+    color: White;
+    }
