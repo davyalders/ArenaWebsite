@@ -1,5 +1,6 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Arena.MasterPage" %>
 
+
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -10,14 +11,24 @@
 </head>
 <body>
     <form id="form1" runat="server">
-          
+        <div>
+            <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false" IncludeStyleBlock="false" Orientation="Horizontal">
+                    <Items>
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Home"/>
+                        <asp:MenuItem NavigateUrl="~/info.aspx" Text="Game info"/>
+                        <asp:MenuItem NavigateUrl="~/Registration.aspx" Text="Register"/>
+                        <asp:MenuItem NavigateUrl="~/Ranking.aspx" Text="Rankings"/>
+                    </Items>
+                </asp:Menu>
+        </div>
+          <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        <link href="Main.css" rel="stylesheet" type="text/css" />
+        </asp:ContentPlaceHolder>
+    </div>
     </form>
 </body>
 </html>
 
 
-  <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
+  

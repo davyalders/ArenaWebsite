@@ -1,32 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="Arena.Registration" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Registration.aspx.cs" Inherits="Arena.Registration" MasterPageFile="MasterPage.Master" %>
 
-<!DOCTYPE html>
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <style type="text/css">
-        .auto-style1 {
-            width: 100%;
-        }
-        .auto-style2 {
-            width: 190px;
-        }
-        .auto-style5 {
-            width: 190px;
-            text-align: right;
-        }
-        .auto-style6 {
-            width: 127px;
-        }
-        .auto-style8 {
-            margin-left: 0px;
-        }
-    </style>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
+ <asp:Content ID="content1" ContentPlaceHolderId="ContentPlaceHolder1" runat="server">
+     <link href="Main.css" rel="stylesheet" type="text/css" />
+     <div id="reg1">
     
         <table class="auto-style1">
             <tr>
@@ -85,6 +62,6 @@
         </table>
     
     </div>
-    </form>
-</body>
-</html>
+          
+
+       </asp:Content>

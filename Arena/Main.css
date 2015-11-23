@@ -1,0 +1,10 @@
+﻿body {
+    background-image: url("Background.png")
+
+}
+
+#reg1 {
+    position: absolute;
+    top: 50%;
+    left: 40%;
+}
