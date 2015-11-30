@@ -18,8 +18,8 @@
             <li><a href="Registration.aspx">Register</a></li>
             <li><a href="Ranking.aspx">Rankings</a></li>
             </ul>
-            
-          <div>
+          </div>
+          <div id ="content1">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
         <link href="Main.css" rel="stylesheet" type="text/css" />
         </asp:ContentPlaceHolder>

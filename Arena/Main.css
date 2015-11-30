@@ -5,9 +5,18 @@
 
 #reg1 {
     position: absolute;
-    top: 200px;
-    left: 482px;
+    top: 40%;
+    left: 40%;
 
+}
+
+#reg2 {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
+    font-weight: bold;
+    color: Grey;
 }
 
 #nav {

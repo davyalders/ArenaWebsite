@@ -16,10 +16,8 @@ namespace Arena
         }
 
         protected void btSubmit_Click(object sender, EventArgs e)
-        {
-            Page.ClientScript.RegisterStartupScript(this.GetType(),"Scripts","<script>alert('Registration succesful')</script>");
-            SendEmail();
-            
+        {          
+            SendEmail();      
         }
 
         public void SendEmail()
@@ -29,18 +27,31 @@ namespace Arena
             client.Host = "smtp.gmail.com";
             client.Port = 587;
 
-            string useractivation = "http://";
+            string activationcode = Guid.NewGuid().ToString();
 
-            message.From = new MailAddress("confirmarena@gmail.com");
-            message.To.Add(tbEmail.Text);
-            message.Subject = "Account Activation";
-            message.Body = "Hello " + tbUsername.Text + "<br>Your email confirmation link: </br><a href = '" +
-                           useractivation + "'> click here</a>";
-            message.IsBodyHtml = true;
-            client.EnableSsl = true;
-            client.UseDefaultCredentials = true;
-            client.Credentials = new System.Net.NetworkCredential("confirmarena@gmail.com", "jezuigt098");
-            client.Send(message);
+            if (Database.SetAccount(tbUsername.Text, tbPassword.Text, tbEmail.Text, activationcode) != -1)
+            {
+                string useractivation = Request.Url.AbsoluteUri.Replace("Registration.aspx",
+                    "Succes.aspx?ActivationCode=" + activationcode);
+
+                message.From = new MailAddress("confirmarena@gmail.com");
+                message.To.Add(tbEmail.Text);
+                message.Subject = "Account Activation";
+                message.Body = "Hello " + tbUsername.Text + "<br>Your email confirmation link: </br><a href = '" +
+                               useractivation + "'> click here</a>";
+                message.IsBodyHtml = true;
+                client.EnableSsl = true;
+                client.UseDefaultCredentials = true;
+                client.Credentials = new System.Net.NetworkCredential("confirmarena@gmail.com", "jezuigt098");
+                client.Send(message);
+                Page.ClientScript.RegisterStartupScript(this.GetType(), "Scripts", "<script>alert('Registration succesful')</script>");
+            }
+            else
+            {
+                Response.Write("Username is already in use");
+            }
+
+
         }
     }
 }
