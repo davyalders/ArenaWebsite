@@ -44,10 +44,7 @@ namespace Arena
                     Debug.WriteLine("Failed to open the database connection!\n" + e);
                     yield break;
                 }
-                finally
-                {
-                    conn.Close();
-                }
+             
 
                 using (var cmd = new OracleCommand(query, conn))
                 {
@@ -63,6 +60,7 @@ namespace Arena
             }
             s.Stop();
             Debug.WriteLine("Executed query {0} in {1}ms", query, s.ElapsedMilliseconds);
+            
         }
 
         /// <summary>
@@ -176,6 +174,19 @@ namespace Arena
             }
 
         }
+
+        public static IEnumerable<Account> GetAccounts()
+        {
+            string query = "SELECT * FROM Account";
+
+            return ExecuteReader(query, reader => new Account
+            {
+                Username = Convert.ToString(reader["Username"]),
+                Rank = Convert.ToInt32(reader["Rank"])
+                
+            });
+        
+    } 
 
     }
 }

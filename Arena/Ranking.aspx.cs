@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
@@ -11,7 +12,14 @@ namespace Arena
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+        
+            List<Account> accounts = new List<Account>();
+            accounts = Database.GetAccounts().ToList();
+            accounts.Sort((x,y) => String.CompareOrdinal(Convert.ToString(x.Rank), Convert.ToString(y.Rank)));
+            gridView1.DataSource = accounts;
+            gridView1.DataBind();
+         
+          
         }
     }
 }
