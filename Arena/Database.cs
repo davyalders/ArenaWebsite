@@ -186,7 +186,20 @@ namespace Arena
                 
             });
         
-    } 
+        }
 
+        public static IEnumerable<Score> GetScore()
+        {
+            string query = "SELECT * FROM Score";
+
+            return ExecuteReader(query, reader => new Score
+            {
+                AccountID = Convert.ToInt32(reader["AccountID"]),
+                HpLeft = Convert.ToInt32(reader["Hpleft"]),
+                Kills = Convert.ToInt32(reader["Kills"]),
+                LivesLeft = Convert.ToInt32(reader["Livesleft"]),
+                Tijd = Convert.ToInt32(reader["Tijd"])
+            });
+        }
     }
 }

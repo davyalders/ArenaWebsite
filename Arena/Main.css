@@ -20,9 +20,19 @@
 }
 #reg4 {
     position: absolute;
+    float: left;
+    
+}
+#reg5 {
+    float: left;
+    margin-left: 173px;
+}
+#wrap {
+    position: absolute;
+    overflow: auto;
     top: 30%;
     left: 23.9%;
-    
+    border: 1px solid;
 }
 
 

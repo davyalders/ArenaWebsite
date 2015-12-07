@@ -19,7 +19,12 @@ namespace Arena
             gridView1.DataSource = accounts;
             gridView1.DataBind();
          
-          
+            List<Score> scores = new List<Score>();
+            scores = Database.GetScore().ToList();
+            accounts.Sort((x,y) => String.CompareOrdinal(Convert.ToString(x.Rank), Convert.ToString(y.Rank)));
+            gridView2.DataSource = scores;
+            gridView2.DataBind();
+
         }
     }
 }
