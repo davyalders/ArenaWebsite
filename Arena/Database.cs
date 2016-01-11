@@ -177,7 +177,7 @@ namespace Arena
 
         public static IEnumerable<Account> GetAccounts()
         {
-            string query = "SELECT * FROM Account";
+            string query = "SELECT * FROM Account where rank is not null";
 
             return ExecuteReader(query, reader => new Account
             {
