@@ -28,7 +28,8 @@
     left: 20%;
     font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
     font-weight: bold;
-    color: Grey;
+    color: grey;
+
 }
 #reg4 {
     position: absolute;
@@ -92,5 +93,30 @@ a:hover {
 }
 .DDGridView td {
     padding: 6px;
+}
+
+h1 {
+    color: darkred;
+    font-weight: bold;
+}
+
+h2 {
+    color: darkred;
+    font-weight: bold;
+}
+
+#l {
+    display: block;
+    list-style: none;
+}
+
+h3 {
+    color: grey;
+    font-weight: bold;
+}
+
+p {
+    color: black;
+    font-weight: lighter;
 }
 
