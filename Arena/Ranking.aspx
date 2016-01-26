@@ -4,6 +4,7 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id ="wrap">
+       
     <div id="reg4">
             <asp:GridView runat="server" AutoGenerateColumns="false" ID="gridView1" CssClass="DDGridView">
        <Columns>

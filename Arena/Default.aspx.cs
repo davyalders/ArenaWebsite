@@ -11,7 +11,10 @@ namespace Arena
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (!IsPostBack)
+            {
+                SetImageUrl();
+            }
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -20,6 +23,35 @@ namespace Arena
             Response.AppendHeader("content-disposition","filename=desktop-1.0.jar");
             Response.TransmitFile(Server.MapPath("~/Files/desktop-1.0.jar"));
             Response.End();
+        }
+        protected void Timer1_Tick(object sender, EventArgs e)
+        {
+            SetImageUrl();
+        }
+
+        private void SetImageUrl()
+        {
+            if (ViewState["ImageDisplayed"] == null)
+            {
+                Image1.ImageUrl = "~/Files/1.png";
+                ViewState["ImageDisplayed"] = 1;
+            }
+            else
+            {
+                int i = (int)ViewState["ImageDisplayed"];
+                if (i == 2)
+                {
+                    Image1.ImageUrl = "~/Files/1.png";
+                    ViewState["ImageDisplayed"] = 1;
+                }
+                else
+                {
+                    i++;
+                    Image1.ImageUrl = "~/Files/" + i.ToString() + ".png";
+                    ViewState["ImageDisplayed"] = i;
+                }
+
+            }
         }
     }
 }

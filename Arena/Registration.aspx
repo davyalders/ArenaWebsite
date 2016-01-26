@@ -3,8 +3,9 @@
 
  <asp:Content ID="content1" ContentPlaceHolderId="ContentPlaceHolder1" runat="server">
      <link href="Main.css" rel="stylesheet" type="text/css" />
-     <div id="reg1">
-    
+     <div id="reg2">
+        <h1>Create account</h1>
+         <p>Hier kunt u een account aanmaken</p>
         <table class="auto-style1">
             <tr>
                 <td class="auto-style5">Username:</td>

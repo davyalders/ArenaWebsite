@@ -1,6 +1,6 @@
 ﻿body {
-    background-image: url("Background.png")
-
+    background-image: url("Background.png");
+    background-size: auto;
 }
 
 #reg1 {
@@ -10,10 +10,22 @@
 
 }
 
+#slider {
+    position: relative;
+    top: 37%;
+    left: 2%;
+    padding-left: 5px;
+    margin-top: 32px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: 300px;
+    width: 600px;
+}
+
 #reg2 {
     position: absolute;
-    top: 40%;
-    left: 40%;
+    top: 30%;
+    left: 20%;
     font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
     font-weight: bold;
     color: Grey;
@@ -39,10 +51,9 @@
 #nav {
     font-family: 'Century Gothic', CenturyGothic, AppleGothic, sans-serif;
     font-weight: bold;
-    width: 100%;
     position: absolute;
     top: 20%;
-    left: 15%;
+    left: 10%;
 }
 
 ul {
@@ -64,6 +75,7 @@ li {
 
 a:hover {
     color: White;
+    transition: color 0.5s;
     }
 
 .DDGridView {

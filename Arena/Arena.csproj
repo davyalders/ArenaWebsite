@@ -67,6 +67,8 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Files\1.png" />
+    <Content Include="Files\2.png" />
     <Content Include="Files\Abby.jpg" />
     <Content Include="Default.aspx" />
     <Content Include="Files\desktop-1.0.jar" />
