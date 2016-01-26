@@ -69,7 +69,7 @@ a {
     padding: 0.2em 7em;
 }
 
-li {
+#nav li {
     display: inline;
     padding: 20px;
 }
@@ -119,4 +119,10 @@ p {
     color: black;
     font-weight: lighter;
 }
+
+#logo{  
+    background-color: transparent;
+    left: 55%;
+}
+
 

@@ -11,6 +11,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        <div id="logo"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a href="Default.aspx"><img id="logonadicia"src= "Files/logo.png"/></a> </div>
         <div id="nav">
             <ul>
             <li><a href="Default.aspx">Home</a></li>
@@ -21,7 +22,7 @@
           </div>
           <div id ="content1">
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        <link href="Main.css" rel="stylesheet" type="text/css" />
+            <link href="Main.css" rel="stylesheet" type="text/css" />
         </asp:ContentPlaceHolder>
     </div>
     </form>
