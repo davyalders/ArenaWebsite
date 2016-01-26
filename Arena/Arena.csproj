@@ -69,6 +69,7 @@
   <ItemGroup>
     <Content Include="Files\Abby.jpg" />
     <Content Include="Default.aspx" />
+    <Content Include="Files\desktop-1.0.jar" />
     <Content Include="Info.aspx" />
     <Content Include="Main.css" />
     <Content Include="packages.config" />

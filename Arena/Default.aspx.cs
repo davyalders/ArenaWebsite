@@ -17,8 +17,8 @@ namespace Arena
         protected void Button1_Click(object sender, EventArgs e)
         {
             Response.ContentType = "application/octect-stream";
-            Response.AppendHeader("content-disposition","filename=Abby.jpg");
-            Response.TransmitFile(Server.MapPath("~/Files/Abby.jpg"));
+            Response.AppendHeader("content-disposition","filename=desktop-1.0.jar");
+            Response.TransmitFile(Server.MapPath("~/Files/desktop-1.0.jar"));
             Response.End();
         }
     }
